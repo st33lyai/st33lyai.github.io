@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>st33lyai</title>
+    <script src="ipManager.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -28,6 +29,11 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+	<h1>IP Address Manager</h1>
+	<p>Add an IP address or network range:</p>
+	<input type="text" id="ipInput">
+	<button onclick="addIP()">Add</button>
+	<ul id="ipList"></ul>
     </style>
 </head>
 <body>
