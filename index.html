@@ -28,9 +28,33 @@
 			margin: 4px 2px;
 			cursor: pointer;
 		}
-</style>
+	</style>
 </head>
 <body>
-	<h1>Welcome to st33lyai</h1>
+	<h1>Active Directory Checklist</h1>
+	<label for="domain">Domain Name:</label>
+	<input type="text" id="domain" name="domain">
+	<button id="save">Save</button>
+	<button id="clear">Clear</button>
+	<div id="output"></div>
+	<script>
+		const saveBtn = document.querySelector('#save');
+		const clearBtn = document.querySelector('#clear');
+		const inputField = document.querySelector('#domain');
+		const outputDiv = document.querySelector('#output');
+
+		saveBtn.addEventListener('click', () => {
+			const domainName = inputField.value;
+			if (domainName) {
+				outputDiv.textContent = `Domain: ${domainName}`;
+				inputField.value = '';
+			}
+		});
+
+		clearBtn.addEventListener('click', () => {
+			inputField.value = '';
+			outputDiv.textContent = '';
+		});
+	</script>
 </body>
 </html>
